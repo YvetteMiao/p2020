@@ -37,17 +37,7 @@ class MovieControllerSpec extends Specification {
         content == []
     }
 
-    void "testFilmCreation"() {
-        when:
-        HttpResponse response = client.toBlocking().exchange(
-                HttpRequest.POST("/movie", new MovieRequest(imdbId: "aaaaa"))
-        )
-        Flowable flowable = client.retrieve(HttpRequest.GET("/movie"), Argument.listOf(Movie))
-        def content = flowable.firstElement().blockingGet()
-        then:
-        response.status == HttpStatus.CREATED
-        content.find { it.title == 'my movie' && it.imdbID == "aaaaa" }
-    }
+
 
     @MockBean(MovieClientImpl)
     MovieClient movieClient() {
