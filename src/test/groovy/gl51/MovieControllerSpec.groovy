@@ -37,8 +37,6 @@ class MovieControllerSpec extends Specification {
         content == []
     }
 
-
-
     @MockBean(MovieClientImpl)
     MovieClient movieClient() {
         def mock = Mock(MovieClient)
