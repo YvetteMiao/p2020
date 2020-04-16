@@ -1,1 +1,0 @@
-<a href="https://www.codefactor.io/repository/github/yvettemiao/p2020"><img src="https://www.codefactor.io/repository/github/yvettemiao/p2020/badge" alt="CodeFactor" /></a>
