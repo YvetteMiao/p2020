@@ -14,8 +14,6 @@ import javax.inject.Inject
 @Controller("/movie")
 class MovieController {
 
-    @Inject
-    MovieRegistry registry
     @Get("/")
     List<Movie> index() {
         registry.listFavorites()
